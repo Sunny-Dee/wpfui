@@ -1,0 +1,27 @@
+﻿<Application x:Class="Dart.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Dart"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- Header text style -->
+        <Style x:Key="headerTextStyle">
+            <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Helvetica"></Setter>
+            <Setter Property="Label.FontWeight" Value="Bold"></Setter>
+            <Setter Property="Label.FontSize" Value="18"></Setter>
+            <Setter Property="Label.Foreground" Value="#0066cc"></Setter>
+        </Style>
+
+        <Style x:Key="buttonStyle">
+            <Setter Property="Button.Width" Value="150"></Setter>
+            <Setter Property="Button.Height" Value="50"></Setter>
+            <Setter Property="Button.Background" Value="#f07c41"></Setter>
+            <Setter Property="Label.Margin" Value="10 3 10 3"></Setter>
+            <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Helvetica"></Setter>
+            <Setter Property="Label.FontSize" Value="12"></Setter>
+            <Setter Property="Label.Foreground" Value="#ffffff"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>

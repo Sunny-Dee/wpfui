@@ -1,0 +1,20 @@
+﻿<Page x:Class="Dart.StartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Dart"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="600"
+      Title="StartPage">
+
+    <StackPanel Margin="10">
+        <Label Style="{StaticResource headerTextStyle}"
+               HorizontalAlignment="Center">Welcome to DART</Label>
+        <Button x:Name="startWizard" Content="start"
+                Click="OnStart"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"/>
+
+    </StackPanel>
+</Page>
