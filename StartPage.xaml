@@ -12,6 +12,7 @@
         <Label Style="{StaticResource headerTextStyle}"
                HorizontalAlignment="Center">Welcome to DART</Label>
         <Button x:Name="startWizard" Content="start"
+                Style="{StaticResource startButtonStyle}"
                 Click="OnStart"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"/>

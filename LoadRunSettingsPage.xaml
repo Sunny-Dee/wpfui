@@ -22,17 +22,17 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
 
-            <Button x:Name="loadFromFileButton" Content="From a file"
+            <Button x:Name="loadFromFileButton" Content="from a file"
                 Style="{StaticResource buttonStyle}"
                 Click="LoadFromFile"
                 Grid.Row="0"/>
 
-            <Button x:Name="loadFromBuildButton" Content="From a build"
+            <Button x:Name="loadFromBuildButton" Content="from a build"
                 Style="{StaticResource buttonStyle}"
                 Click="LoadFromBuild"
                 Grid.Row="1"/>
 
-            <Button x:Name="loadFromArtifact" Content="From an artifact"
+            <Button x:Name="loadFromArtifact" Content="from an artifact"
                 Style="{StaticResource buttonStyle}"
                 Click="LoadFromArtifact"
                 Grid.Row="2"/>
