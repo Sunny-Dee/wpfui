@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -30,7 +31,13 @@ namespace Dart
 
         private void LoadFromFile(object sender, RoutedEventArgs e)
         {
-
+            OpenFileDialog dialog = new OpenFileDialog();
+            if (dialog.ShowDialog() == true)
+            {
+                // var filename = dialog.FileName;
+                // open loading page and load file
+                // go to run page
+            }
         }
 
         private void LoadFromArtifact(object sender, RoutedEventArgs e)

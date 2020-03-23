@@ -23,19 +23,21 @@
 
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border CornerRadius="5" Background="#022249" BorderThickness="1" Padding="2">
+                    <ControlTemplate  TargetType="Button">
+                        <Border Name="border" CornerRadius="5" Background="#022249" BorderThickness="2.5" Padding="2">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#95fefe" />
+                                <Setter Property="Label.FontSize" Value="12.5"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Button.Foreground" Value="DarkGoldenrod"/>
-                </Trigger>
-            </Style.Triggers>
         </Style>
 
 
@@ -43,23 +45,31 @@
         <Style TargetType="Button" x:Key="buttonStyle">
             <Setter Property="Button.Width" Value="150"></Setter>
             <Setter Property="Button.Height" Value="50"></Setter>
-            <Setter Property="Button.Background" Value="#f07c41"></Setter>
             <Setter Property="Button.BorderBrush" Value="Transparent"></Setter>
             <Setter Property="Label.Margin" Value="10 3 10 3"></Setter>
             <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
             <Setter Property="Label.FontFamily" Value="Helvetica"></Setter>
             <Setter Property="Label.FontSize" Value="12"></Setter>
             <Setter Property="Label.Foreground" Value="#ffffff"></Setter>
-
-            <Setter Property="Template">
+            
+                        <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border CornerRadius="5" Background="#f07c41" BorderThickness="1" Padding="2">
+                    <ControlTemplate  TargetType="Button">
+                        <Border Name="border" CornerRadius="5" Background="#f07c41" BorderThickness="2.5" Padding="2">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#95fefe" />
+                                <Setter Property="Label.FontSize" Value="12.5"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+
         </Style>
     </Application.Resources>
 </Application>
