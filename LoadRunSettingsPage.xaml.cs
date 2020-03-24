@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using Dart.Classes;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -32,17 +33,29 @@ namespace Dart
         private void LoadFromFile(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Run settings files (*.runsettings)|*.runsettings|All files (*.*)|*.*";
             if (dialog.ShowDialog() == true)
             {
-                // var filename = dialog.FileName;
-                // open loading page and load file
-                // go to run page
+                var filename = dialog.FileName;
+                var runSettings = ProcessRunSettingFromFile(filename);
+                var loadingPage = new ProcessRunSettingsPage(runSettings);
+                NavigationService.Navigate(loadingPage);
             }
         }
 
         private void LoadFromArtifact(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private RunSettings ProcessRunSettingFromFile(string filename)
+        {
+            var runsettings = new RunSettings()
+            {
+                Filename = filename
+            };
+
+            return runsettings;
         }
     }
 }

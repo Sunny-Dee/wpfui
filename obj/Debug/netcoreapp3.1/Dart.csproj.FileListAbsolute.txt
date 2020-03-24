@@ -22,3 +22,7 @@ C:\Users\Administrator\source\repos\Dart\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\Administrator\source\repos\Dart\obj\Debug\netcoreapp3.1\LoadRunSettingsPage.baml
 C:\Users\Administrator\source\repos\Dart\obj\Debug\netcoreapp3.1\StartPage.g.cs
 C:\Users\Administrator\source\repos\Dart\obj\Debug\netcoreapp3.1\StartPage.baml
+C:\Users\Administrator\source\repos\Dart\obj\Debug\netcoreapp3.1\ProcessRunSettingsPage.g.cs
+C:\Users\Administrator\source\repos\Dart\bin\Debug\netcoreapp3.1\XamlAnimatedGif.dll
+C:\Users\Administrator\source\repos\Dart\obj\Debug\netcoreapp3.1\ProcessRunSettingsPage.baml
+C:\Users\Administrator\source\repos\Dart\obj\Debug\netcoreapp3.1\Dart.csproj.CopyComplete

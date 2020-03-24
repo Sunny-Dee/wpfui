@@ -1,11 +1,39 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "XamlAnimatedGif/1.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/XamlAnimatedGif.dll": {}
+        },
+        "runtime": {
+          "lib/net45/XamlAnimatedGif.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "XamlAnimatedGif/1.2.2": {
+      "sha512": "WsoaNfOqjLGO3q6UUr5CsyoNiCME8+0+W+BeZOPFieLpf8eRuU/ksHW/mnxEtcA41WYA+lB+kx0vrsJaTK4+fg==",
+      "type": "package",
+      "path": "xamlanimatedgif/1.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/XamlAnimatedGif.dll",
+        "lib/net45/XamlAnimatedGif.dll",
+        "lib/portable-win81+wpa81/XamlAnimatedGif.dll",
+        "lib/sl5/XamlAnimatedGif.dll",
+        "xamlanimatedgif.1.2.2.nupkg.sha512",
+        "xamlanimatedgif.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "XamlAnimatedGif >= 1.2.2"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Administrator\\.nuget\\packages\\": {},
@@ -47,6 +75,12 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "dependencies": {
+          "XamlAnimatedGif": {
+            "target": "Package",
+            "version": "[1.2.2, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -68,5 +102,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'XamlAnimatedGif 1.2.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "XamlAnimatedGif",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
