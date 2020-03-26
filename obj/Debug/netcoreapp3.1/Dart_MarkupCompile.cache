@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\Administrator\source\repos\Dart\App.xaml
-4-2081496146
+5-2108905986
 
-8-1040536738
+9-518715612
 193-1345901351
-LoadRunSettingsPage.xaml;MainWindow.xaml;ProcessRunSettingsPage.xaml;StartPage.xaml;
+LoadRunSettingsPage.xaml;MainWindow.xaml;ProcessRunSettingsPage.xaml;RunTestsPage.xaml;StartPage.xaml;
 
 False
 

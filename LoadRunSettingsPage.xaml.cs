@@ -37,9 +37,18 @@ namespace Dart
             if (dialog.ShowDialog() == true)
             {
                 var filename = dialog.FileName;
-                var runSettings = ProcessRunSettingFromFile(filename);
-                var loadingPage = new ProcessRunSettingsPage(runSettings);
-                NavigationService.Navigate(loadingPage);
+                showWorkingOnItScreen();
+                
+                //var runSettings = ProcessRunSettingFromFile(filename);
+                //var loadingPage = new ProcessRunSettingsPage(runSettings);
+                //NavigationService.Navigate(loadingPage);
+
+           //     Task.Delay(10000).ContinueWith(_ =>
+           //     {
+           //         var runTestsPage = new RunTestsPage();
+           //         NavigationService.Navigate(runTestsPage);
+           //     }
+           //);
             }
         }
 
@@ -56,6 +65,15 @@ namespace Dart
             };
 
             return runsettings;
+        }
+
+        private void showWorkingOnItScreen()
+        {
+            chooseSourcePanel.Visibility = Visibility.Collapsed;
+            workingOnIt.Visibility = Visibility.Visible;
+
+            var bc = new BrushConverter();
+            loadRunSettingsStackPanel.Background = (Brush)bc.ConvertFrom("#fccb99");
         }
     }
 }

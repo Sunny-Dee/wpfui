@@ -13,6 +13,9 @@
     <Compile Update="LoadRunSettingsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="RunTestsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="StartPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -30,6 +33,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RunTestsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="StartPage.xaml">
