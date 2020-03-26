@@ -7,9 +7,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="ProcessRunSettingsPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="LoadRunSettingsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -26,9 +23,6 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="ProcessRunSettingsPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="LoadRunSettingsPage.xaml">
       <SubType>Designer</SubType>
     </Page>

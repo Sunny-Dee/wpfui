@@ -9,9 +9,14 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LoadRunSettingsPage">
 
-    <StackPanel x:Name="loadRunSettingsStackPanel">
-        <Label Style="{StaticResource headerTextStyle}"
-               HorizontalAlignment="Center">Load your run settings</Label>
+    <StackPanel x:Name="loadRunSettingsStackPanel" Margin="-1,0,1,0">
+        <Label x:Name="loadRunSettingsPageTitle" 
+               Style="{StaticResource headerTextStyle}"
+               Content="Load your run settings"/>
+
+        <Label x:Name="loadRunSettingsPageSubtitle" 
+               Content="placeholder subtitle"
+               Style="{StaticResource subtitleTextStyle}"/>
 
         <Grid x:Name="chooseSourcePanel" HorizontalAlignment="Center" Margin="10">
             <Grid.ColumnDefinitions>

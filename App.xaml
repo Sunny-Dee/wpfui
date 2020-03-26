@@ -11,7 +11,17 @@
             <Setter Property="Label.FontFamily" Value="Helvetica"></Setter>
             <Setter Property="Label.FontWeight" Value="Bold"></Setter>
             <Setter Property="Label.FontSize" Value="18"></Setter>
-            <Setter Property="Label.Foreground" Value="#09294f"></Setter>
+            <Setter Property="Label.Foreground" Value="#022249"></Setter>
+            <Setter Property="Label.HorizontalAlignment" Value="Center"></Setter>
+        </Style>
+
+        <Style x:Key="subtitleTextStyle">
+            <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.Margin" Value="3"></Setter>
+            <Setter Property="Label.FontFamily" Value="Helvetica"></Setter>
+            <Setter Property="Label.FontSize" Value="14"></Setter>
+            <Setter Property="Label.Foreground" Value="White"></Setter>
+            <Setter Property="Label.HorizontalAlignment" Value="Center"></Setter>
         </Style>
 
         <Style TargetType="Button"  x:Key="startButtonStyle">
