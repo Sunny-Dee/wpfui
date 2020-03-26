@@ -43,7 +43,7 @@
                 Click="LoadFromArtifact"
                 Grid.Row="2"/>
         </Grid>
-        <Image x:Name="workingOnIt" gif:AnimationBehavior.SourceUri="Resources\monkeyworking.gif" 
+        <Image x:Name="workingOnIt" gif:AnimationBehavior.SourceUri="..\Resources\monkeyworking.gif" 
                Height="200" Width="200" Visibility="Hidden"/>
     </StackPanel>
 </Page>

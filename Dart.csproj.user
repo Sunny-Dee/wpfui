@@ -7,13 +7,13 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="LoadRunSettingsPage.xaml.cs">
+    <Compile Update="Pages\LoadRunSettingsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="RunTestsPage.xaml.cs">
+    <Compile Update="Pages\RunTestsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="StartPage.xaml.cs">
+    <Compile Update="Pages\StartPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -23,16 +23,16 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="LoadRunSettingsPage.xaml">
+    <Page Update="Pages\LoadRunSettingsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="RunTestsPage.xaml">
+    <Page Update="Pages\RunTestsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="StartPage.xaml">
+    <Page Update="Pages\StartPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

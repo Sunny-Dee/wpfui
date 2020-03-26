@@ -11,8 +11,9 @@
     <StackPanel>
         <Label Style="{StaticResource headerTextStyle}"
                HorizontalAlignment="Center">Run settings loaded successfully</Label>
-        <Label Style="{StaticResource headerTextStyle}"
-               HorizontalAlignment="Center">run your tests?</Label>
+        <Label Style="{StaticResource subtitleTextStyle}"
+               HorizontalAlignment="Center" 
+               Content="run your tests?"/> 
 
         <Button x:Name="runTestsButton" Content="run!"
                 Style="{StaticResource buttonStyle}"
