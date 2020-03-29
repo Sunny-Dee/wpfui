@@ -3,20 +3,39 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:gif ="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
       xmlns:local="clr-namespace:Dart"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="RunTestsPage">
 
-    <StackPanel>
-        <Label Style="{StaticResource headerTextStyle}"
-               HorizontalAlignment="Center">Run settings loaded successfully</Label>
-        <Label Style="{StaticResource subtitleTextStyle}"
+    <StackPanel x:Name="runSettingsPanel">
+        <Label Style="{StaticResource headerTextStyle}" Content="Run settings loaded successfully"
+               HorizontalAlignment="Center"/>
+        <Label x:Name="runTestsSubtitle" Style="{StaticResource subtitleTextStyle}"
                HorizontalAlignment="Center" 
-               Content="run your tests?"/> 
+               Content="Run your tests?"/>
 
-        <Button x:Name="runTestsButton" Content="run!"
-                Style="{StaticResource buttonStyle}"
-                Click="RunTestsButtonClick"/>
+        <Grid x:Name="runTestsButtons" HorizontalAlignment="Center" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <Button x:Name="runTestsButton" Content="run!"
+                    Style="{StaticResource buttonStyle}"
+                    Click="RunTestsButtonClick"
+                    Grid.Row="0"/>
+
+            <Button x:Name="editSettingsButton" Content="edit run settings"
+                    Style="{StaticResource buttonStyle}"
+                    Click="EditsRunSettingsButtonClick"
+                    Grid.Row="1"/>
+        </Grid>
+        <Image x:Name="runningTests" gif:AnimationBehavior.SourceUri="..\Resources\runningtests.gif" 
+               Height="200" Width="200" Visibility="Hidden"/>
     </StackPanel>
 </Page>

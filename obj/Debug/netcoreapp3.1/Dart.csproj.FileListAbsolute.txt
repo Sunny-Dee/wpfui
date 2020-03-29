@@ -26,3 +26,5 @@ C:\Users\Administrator\source\repos\Dart\obj\Debug\netcoreapp3.1\Pages\StartPage
 C:\Users\Administrator\source\repos\Dart\obj\Debug\netcoreapp3.1\Pages\LoadRunSettingsPage.baml
 C:\Users\Administrator\source\repos\Dart\obj\Debug\netcoreapp3.1\Pages\RunTestsPage.baml
 C:\Users\Administrator\source\repos\Dart\obj\Debug\netcoreapp3.1\Pages\StartPage.baml
+C:\Users\Administrator\source\repos\Dart\obj\Debug\netcoreapp3.1\Pages\TestRunResultPage.g.cs
+C:\Users\Administrator\source\repos\Dart\obj\Debug\netcoreapp3.1\Pages\TestRunResultPage.baml

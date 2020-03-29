@@ -30,17 +30,17 @@
 
             <Button x:Name="loadFromFileButton" Content="from a file"
                 Style="{StaticResource buttonStyle}"
-                Click="LoadFromFile"
+                Click="LoadFromFileHandler"
                 Grid.Row="0"/>
 
             <Button x:Name="loadFromBuildButton" Content="from a build"
                 Style="{StaticResource buttonStyle}"
-                Click="LoadFromBuild"
+                Click="LoadFromBuildHandler"
                 Grid.Row="1"/>
 
             <Button x:Name="loadFromArtifact" Content="from an artifact"
                 Style="{StaticResource buttonStyle}"
-                Click="LoadFromArtifact"
+                Click="LoadFromArtifactHandler"
                 Grid.Row="2"/>
         </Grid>
         <Image x:Name="workingOnIt" gif:AnimationBehavior.SourceUri="..\Resources\monkeyworking.gif" 

@@ -13,7 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.IO;
 
 namespace Dart
 {
@@ -23,6 +23,7 @@ namespace Dart
     public partial class LoadRunSettingsPage : Page
     {
         private const string defaultSubtitle = "Choose a source from where to get the run settings";
+        private const string runsettingsExtension = ".runsettings";
 
         public LoadRunSettingsPage()
         {
@@ -30,12 +31,20 @@ namespace Dart
             loadRunSettingsPageSubtitle.Content = defaultSubtitle;
         }
 
-        private void LoadFromBuild(object sender, RoutedEventArgs e)
+        public LoadRunSettingsPage(string subtitle)
         {
-
+            InitializeComponent();
+            loadRunSettingsPageSubtitle.Content = subtitle;
         }
 
-        private async void LoadFromFile(object sender, RoutedEventArgs e)
+        private void LoadFromBuildHandler(object sender, RoutedEventArgs e)
+        {
+            // TODO
+            var runTestsPage = new RunTestsPage();
+            NavigationService.Navigate(runTestsPage);
+        }
+
+        private async void LoadFromFileHandler(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog
             {
@@ -44,28 +53,40 @@ namespace Dart
             if (dialog.ShowDialog() == true)
             {
                 var filename = dialog.FileName;
-                showWorkingOnItScreen();
-
-                await pretendToDoWork();
-
-                var runTestsPage = new RunTestsPage();
-                NavigationService.Navigate(runTestsPage);
-            }
+                var success = await ProcessRunSettingFromFile(filename);
+                if (success)
+                {
+                    var runTestsPage = new RunTestsPage();
+                    NavigationService.Navigate(runTestsPage);
+                    return;
+                }
+            } 
+                
+            //reset the page to try again          
+            var newLoadSettingsPage = new LoadRunSettingsPage($"Load run settings failed. Try again.");
+            NavigationService.Navigate(newLoadSettingsPage);            
         }
 
-        private void LoadFromArtifact(object sender, RoutedEventArgs e)
+        private void LoadFromArtifactHandler(object sender, RoutedEventArgs e)
         {
-
+            //TODO 
+            var runTestsPage = new RunTestsPage();
+            NavigationService.Navigate(runTestsPage);
         }
 
-        private RunSettings ProcessRunSettingFromFile(string filename)
+        private async Task<bool> ProcessRunSettingFromFile(string filename)
         {
-            var runsettings = new RunSettings()
+            showWorkingOnItScreen();
+
+            await pretendToDoWork(3);
+
+            var ext = Path.GetExtension(filename);
+            if (ext != runsettingsExtension)
             {
-                Filename = filename
-            };
+                return false;
+            }
 
-            return runsettings;
+            return true;
         }
 
         private void showWorkingOnItScreen()
@@ -79,20 +100,9 @@ namespace Dart
             loadRunSettingsPageSubtitle.Content = "working on it";
         }
 
-        private void resetPageStyle()
+        private async Task pretendToDoWork(int seconds)
         {
-            chooseSourcePanel.Visibility = Visibility.Visible;
-            workingOnIt.Visibility = Visibility.Hidden;
-
-            //var bc = new BrushConverter();
-            //loadRunSettingsStackPanel.Background = (Brush)bc.ConvertFrom("#fccb99");
-
-            loadRunSettingsPageSubtitle.Content = defaultSubtitle;
-        }
-
-        private async Task pretendToDoWork()
-        {
-            await Task.Delay(10000);
+            await Task.Delay(seconds * 1000);
         }
     }
 }
