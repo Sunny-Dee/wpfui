@@ -19,6 +19,9 @@
     <Compile Update="Pages\TestRunResultPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\AdvancedSettingsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Resource Update="Properties\Resources.resx">
@@ -39,6 +42,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\TestRunResultPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\AdvancedSettingsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -8,24 +8,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dart.Pages
+namespace Dart.Windows
 {
     /// <summary>
-    /// Interaction logic for TestRunResultPage.xaml
+    /// Interaction logic for AdvancedSettingsWindow.xaml
     /// </summary>
-    public partial class TestRunResultPage : Page
+    public partial class AdvancedSettingsWindow : Window
     {
-        public TestRunResultPage()
+        public AdvancedSettingsWindow()
         {
             InitializeComponent();
-        }
-
-        private void ShowTestReportHandler(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

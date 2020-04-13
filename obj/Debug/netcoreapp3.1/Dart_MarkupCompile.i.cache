@@ -1,5 +1,5 @@
 ﻿Dart
-
+1.0.0.0
 
 winexe
 C#
@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\Administrator\source\repos\Dart\App.xaml
-5587433801
+62101718676
 
-10-28771095
+12-965277078
 193-1345901351
-MainWindow.xaml;Pages\LoadRunSettingsPage.xaml;Pages\RunTestsPage.xaml;Pages\StartPage.xaml;Pages\TestRunResultPage.xaml;
+MainWindow.xaml;Pages\LoadRunSettingsPage.xaml;Pages\RunTestsPage.xaml;Pages\StartPage.xaml;Pages\TestRunResultPage.xaml;Windows\AdvancedSettingsWindow.xaml;
 
-True
+False
 

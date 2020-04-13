@@ -8,7 +8,18 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TestRunResultPage">
 
-    <Grid>
-        <Label Content="Placeholder: results here"/>
-    </Grid>
+    <StackPanel>
+        <Label Style="{StaticResource headerTextStyle}" Content="Your tests results"
+               HorizontalAlignment="Center"/>
+
+        <StackPanel Style="{StaticResource testResultPanel}">
+            <ListBox Margin="20">
+                <ListBoxItem>Passed tests: 24</ListBoxItem>
+                <ListBoxItem>Failed tests: 3</ListBoxItem>
+            </ListBox>
+        </StackPanel>
+        <Button x:Name="showTestResultsButton" Content="details"
+                Style="{StaticResource buttonStyle}"
+                Click="ShowTestReportHandler"/>
+    </StackPanel>
 </Page>

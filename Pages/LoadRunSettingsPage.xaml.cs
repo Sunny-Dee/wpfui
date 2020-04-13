@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.IO;
+using Dart.Windows;
 
 namespace Dart
 {
@@ -53,7 +54,7 @@ namespace Dart
             if (dialog.ShowDialog() == true)
             {
                 var filename = dialog.FileName;
-                var success = await ProcessRunSettingFromFile(filename);
+                var success = await ProcessRunSettingFromFileHandler(filename);
                 if (success)
                 {
                     var runTestsPage = new RunTestsPage();
@@ -67,14 +68,14 @@ namespace Dart
             NavigationService.Navigate(newLoadSettingsPage);            
         }
 
-        private void LoadFromArtifactHandler(object sender, RoutedEventArgs e)
+        private void LoadFromVSTSDrop(object sender, RoutedEventArgs e)
         {
             //TODO 
             var runTestsPage = new RunTestsPage();
             NavigationService.Navigate(runTestsPage);
         }
 
-        private async Task<bool> ProcessRunSettingFromFile(string filename)
+        private async Task<bool> ProcessRunSettingFromFileHandler(string filename)
         {
             showWorkingOnItScreen();
 
@@ -87,6 +88,12 @@ namespace Dart
             }
 
             return true;
+        }
+
+        private void AdvancedRunSettingsHandler(object sender, RoutedEventArgs e)
+        {
+            var advancedWindow = new AdvancedSettingsWindow();
+            advancedWindow.ShowDialog();
         }
 
         private void showWorkingOnItScreen()

@@ -9,7 +9,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LoadRunSettingsPage">
 
-    <StackPanel x:Name="loadRunSettingsStackPanel" Margin="-1,0,1,0">
+    <StackPanel x:Name="loadRunSettingsStackPanel">
         <Label x:Name="loadRunSettingsPageTitle" 
                Style="{StaticResource headerTextStyle}"
                Content="Load your run settings"/>
@@ -18,11 +18,13 @@
                Content="placeholder subtitle"
                Style="{StaticResource subtitleTextStyle}"/>
 
-        <Grid x:Name="chooseSourcePanel" HorizontalAlignment="Center" Margin="10">
+        <Grid x:Name="chooseSourcePanel" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+                <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
@@ -31,18 +33,33 @@
             <Button x:Name="loadFromFileButton" Content="from a file"
                 Style="{StaticResource buttonStyle}"
                 Click="LoadFromFileHandler"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
                 Grid.Row="0"/>
 
             <Button x:Name="loadFromBuildButton" Content="from a build"
                 Style="{StaticResource buttonStyle}"
                 Click="LoadFromBuildHandler"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
                 Grid.Row="1"/>
 
-            <Button x:Name="loadFromArtifact" Content="from an artifact"
+            <Button x:Name="loadFromVSTSDrop" Content="from VSTS Drop"
                 Style="{StaticResource buttonStyle}"
-                Click="LoadFromArtifactHandler"
+                Click="LoadFromVSTSDrop"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
                 Grid.Row="2"/>
+            <Button x:Name="advancedSettingsButton" Content="Advanced settings"
+                    Style="{StaticResource specialButtonStyle}"
+                    Click="AdvancedRunSettingsHandler"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Grid.Column="1"
+                    Grid.Row="3"/>
         </Grid>
+
+        
         <Image x:Name="workingOnIt" gif:AnimationBehavior.SourceUri="..\Resources\monkeyworking.gif" 
                Height="200" Width="200" Visibility="Hidden"/>
     </StackPanel>
