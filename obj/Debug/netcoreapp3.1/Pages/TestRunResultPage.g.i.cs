@@ -61,7 +61,7 @@ namespace Dart.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Dart;V1.0.0.0;component/pages/testrunresultpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Dart;component/pages/testrunresultpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Pages\TestRunResultPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
